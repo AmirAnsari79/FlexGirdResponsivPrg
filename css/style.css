@@ -1,184 +1,208 @@
 *,
 *::after,
-*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-:root{
-    --color-primary:#ff5722;
-    --color-navbar:#f8f8f8;
-    --color-secondary-light:#fff6f2;
-    --color-secondary-dark:#ffa589;
-    --color-body:#333333;
-    --color-headnig:#000;
-
+:root {
+  --color-primary: #ff5722;
+  --color-navbar: #f8f8f8;
+  --color-secondary-light: #fff6f2;
+  --color-secondary-dark: #ffa589;
+  --color-body: #333333;
+  --color-headnig: #000;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-body{
-    color: var(--color-body);
-    font-size: 1.4rem; /*14px */
+body {
+  color: var(--color-body);
+  font-size: 1.4rem; /*14px */
 }
-h1,h2,h3{
-    color: var(--color-headnig);
-    font-weight: 700;
+h1,
+h2,
+h3 {
+  color: var(--color-headnig);
+  font-weight: 700;
 }
-h1{
-    font-size: 2.5rem;
+h1 {
+  font-size: 2.5rem;
 }
-h2{
-    font-size: 2.2rem;
+h2 {
+  font-size: 2.2rem;
 }
 
 @media screen and(min-width:1024px) {
-    body{
-        font-size: 1.8rem;
-    }
-    h1{
-        font-size: 5rem;
-    }
-    h2{
-        font-size: 3.5rem;
-    }
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
 }
 
 /*button */
-.btn{
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    padding: 2rem 2.5rem;
-    border-radius: 8px;
-    margin: 1rem;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 1.4rem;
-
-
+.btn {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  margin: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
 }
-.btn--primary{
-    background-color: var(--color-primary);
-    color: #fff;
-
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
-.btn--secondry{
-    background-color: var(--color-secondary-dark);
-    color: #fff;
-
+.btn--secondry {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
 }
 
-.btn-block{
-    width: 100%;
-    font-size: 1.6rem;
+.btn--block {
+  width: 100%;
+  font-size: 1.6rem;
 }
 
 @media screen and(min-width:1024px) {
-    .btn{
-        font-size: 1.6rem;
-    }
-    .btn-block{
-        font-size: 2rem;
-    }
+  .btn {
+    font-size: 1.6rem;
+  }
+  .btn--block {
+    font-size: 2rem;
+  }
 }
 
 /*badge*/
-.badge{
-    background-color: #fff;
-    color: var(--color-primary);
-    padding: 0.5rem 1.3rem ;
-    border: 2px solid var(--color-primary);
-    border-radius: 32px;
-    display: inline-block;
-    font-size: 1.2rem;
-    
-
+.badge {
+  background-color: #fff;
+  color: var(--color-primary);
+  padding: 0.5rem 1.3rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 32px;
+  display: inline-block;
+  font-size: 1.2rem;
 }
-.badge--primary{
-    background-color: var(--color-primary);
-    color: #fff;
+.badge--primary {
+  background-color: var(--color-primary);
+  color: #fff;
 }
-.badge--secondary{
-    background-color:#fff;
-    color: var(--color-primary);
+.badge--secondary {
+  background-color: #fff;
+  color: var(--color-primary);
 }
 @media screen and(min-width:1024px) {
-    .badge{
-        font-size: 1.4rem;
-    }
-
+  .badge {
+    font-size: 1.4rem;
+  }
 }
 /*list*/
-.list{
-    list-style: none;
-    font-size: 2.5rem;
+.list {
+  list-style: none;
+  font-size: 2.5rem;
 }
-.list--tick .list__item{
-    background:url(../assets/image/icons8-done-48.svg) no-repeat ;
-    background-position:right center ;
-    padding-right:5rem;
-    margin-bottom: 1.5rem;
+.list--tick .list__item {
+  background: url(../assets/image/icons8-done-48.svg) no-repeat;
+  background-position: right center;
+  padding-right: 5rem;
+  margin-bottom: 1.5rem;
 }
-@media screen and (min-width:1024px) {
-    .list--tick .list__item{
-        font-size: 3rem;
-        margin-bottom: 3rem;
-    }
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 /*plan*/
-.block-plan{
-    display: grid;
-    gap:2rem 3rem;
-   
+.block-plan {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit,minmax(250px,320px));
+  gap: 10rem 10rem; 
+  margin-top: 5rem;
+      
+              
 }
-.plan{
-    max-width: 500px;
+.plan {
+  font-size: 1.8rem;
+  transition: all 0.2s ease-in-out;
+  
 }
-.card{
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 20px 10px  #c6c3c3bb;
-    
+.plan-popular{
+    transform: scale(1.1);
 }
-.card__body,.card__header{
-padding:3rem 2.5rem;
+.plan
+.btn--block {
+  font-size: 1.6rem;
+  margin-top: 10rem;
+}
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 10px #c6c3c3bb;
+}
+.card__body,
+.card__header {
+  padding: 3rem 2.5rem;
+}
+.card__intro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.card__price {
+  font-size: 3rem;
+}
+.card__bil {
+  font-size: 1.4rem;
+}
+.card--primay {
+  background-color: #ff7a50;
+  color: #fff;
+}
+.card--secondary {
+  background-color: var(--color-secondary-dark);
+  color: #fff;
+}
+
+.card__description {
+  display: block;
+  margin-top: 1.5rem;
+}
+.plan:hover{
+    transform: scale(1.05);
+}
+.plan-popular:hover{
+    transform: scale(1.14);
+}
+@media screen and (min-width: 1024px) {
+  .block-plan {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 3rem; 
+    margin-top: 5rem;
+    margin-right: 5rem; 
+ }
+  .plan,
+  .btn--block {
+    font-size: 1.8rem;
+    /* gap:6rem 3rem */
+  }
+}
 
 
-}
-.card__intro{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-.card__price{
-    font-size: 3rem;
-}
-.card__bil{
-    font-size: 1.4rem;
-}
-.card--primay{
-    background-color: #ff7a50;
-    color: #fff;
-}
-.card--secondary{
-    background-color: var(--color-secondary-dark);
-    color: #fff;
-}
-
-.card__description{
-    display: block;
-    margin-top: 1.5rem;
-    
-}
-@media screen and (min-width:1024px) {
-    .block-plan{
-        grid-template-columns: repeat(3,1fr);
-        justify-content: space-around;
-    }
-    
+/* container */
+.container{
+  max-width:1140px ;
+  margin: 0 auto;
 }
